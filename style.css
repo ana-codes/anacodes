@@ -1,0 +1,16 @@
+h1{
+	text-align: center;
+	font-family: 'The Girl Next Door', cursive;
+}
+ul{
+	list-style: none;
+}
+div > ul {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+div:hover> ul {
+  visibility: visible;
+  opacity: 1;
+}
