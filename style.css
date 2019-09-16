@@ -1,16 +1,149 @@
+html{
+	overflow: hidden;
+}
+html, body{
+	display: block
+	height:100%;
+	overflow-y:scroll;
+	-webkit-overflow-scrolling: touch;
+	margin: 0;
+background-color: rgb(189, 230, 226);
+}
+
+#pages{
+
+}
+.topbar{
+	height: 50px;
+	width: 100%;
+	background: /*linear-gradient(90deg, rgba(238,235,118,1) 8%, rgba(255,229,185,1) 100%);*/
+	opacity: 0.9;
+	position: fixed;
+}
+#page-content{
+display: inline-block;
+transition: 0.5s;
+font-size: 16px;
+padding: 4vh;
+padding-bottom: 2vh;
+height:100%;
+background-image: url(/images/bg2.jpg);
+background-repeat: repeat;
+}
+
+#readMore{
+	display: none;
+}
+#moreBtn{
+	float:right;
+	height: 5vh;
+	width: 40vh;
+	margin-top: 10px;
+	margin-right: 19vh;
+	font-size: 20px;
+	opacity: 0.7;
+	background-color: rgb(161, 185, 188);
+	border:none;
+	font-family: 'The Girl Next Door', cursive;
+}
+
+#page2-content{
+transition: 0.5s;
+font-size: 16px;
+background-size: 700, 980;
+padding: 4vh;
+height:100%;
+background-image: url(/images/bg3.jpg);
+background-repeat: repeat;
+}
 h1{
 	text-align: center;
 	font-family: 'The Girl Next Door', cursive;
+	font-size: 38px;
+}
+@media only screen and (max-width: 600px){
+	#ana{
+		width: 183px;
+		height: 245px;
+		padding: 1vh;
+		margin-left: 1vh;
+	}
+	#page-content{
+		padding: 2vh;
+	}
+}
+#ana{
+	margin-left: 3vh;
+	padding: 3vh;
+	width: 244px;
+	height:326px;
+	float: right;
+
+}
+#chart{
+	display: flex;
+	flex-direction: row;
+}
+#flex{
+display: inherit;
+
+
+}
+#text{
+	font-size: 2.6vh;
+	font-family: 'Rubik', sans-serif;
+}
+
+
+.sidebar{
+	position: fixed;
+	opacity: 0;
+	background-color: rgb(204, 128, 140);
+	align-items: left;
+	height: 100%;
+	width: 0px;
+	transition: 0.5s;
+	color:white;
+	text-align: right;
+	width: 40vh;
+}
+.hoverZone{
+	position: fixed;
+	height:1000px;
+	width:100px;
+	background-color: black;
+	align-items: left;
+	opacity: 0;
 }
 ul{
+text-align: center;
 	list-style: none;
+	transition: 0.5s;
+	opacity: 0;
+	color:white;
+	margin-right: 25px;
+	padding-right: 25px;
+	font-size: 34px;
+	line-height: 10vh;
 }
-div > ul {
-  visibility: hidden;
-  opacity: 0;
-  transition: visibility 0s, opacity 0.5s linear;
+#navBtn{
+	font-size: 45px;
+	transition: 0.4s;
+	position: fixed;
+	float: top;
 }
-div:hover> ul {
-  visibility: visible;
-  opacity: 1;
+#closeNav{
+	position: relative;
+	opacity: 0;
+	font-size: 36px;
+	padding-left: 5px;
+	padding-right: 5px;
+	transition: 0.4s;
+	cursor:default;
+}
+#primg{
+	width: 220px;
+	height: auto;
+	float: right;
+	padding: 2vh;
 }

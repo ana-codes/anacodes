@@ -2,22 +2,98 @@
 <html>
 <head>
 	<title>Ana Codes</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
 	<link href="https://fonts.googleapis.com/css?family=The+Girl+Next+Door&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=0.65">
+		<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-<div class="page-content">
-	<h1>Ana Codes</h1>	
+<div class='topbar' id='topbar'>
+	<span onclick="openNav();" id='navBtn'><img width="50px" height="50px" src="/images/opennav.png"></span>
 </div>
+<div class="hoverZone" onmouseover="openNav()" onmouseout="closeNav()"></div>
+<div class="sidebar" id="mySidebar" onmouseover="openNav()" onmouseout="closeNav()">
 
-<div class="sidebar" onclick="visibility: visible;
-  opacity: 1;">
-	<ul>
-		<li>About</li>
-		<li>Projects</li>
+<span onclick="closeNav();" id='closeNav'><img width="50px" height="50px" src="/images/opennav.png"></span>
+	<ul id="ul">
 		<li>Blog</li>
+		<li>Projects</li>
 		<li>Contact</li>
 	</ul>
+</div>
+
+
+<div id="pages">
+	<div id="page-content">
+
+		<div id='content-header'>
+			<h1>Ana Codes</h1>
+			
+			
+		</div>
+		<div id="flex">	
+			<img id='ana' src="/images/ana3.jpg">
+					<div id="text">
+						6/15/2019
+						Today I've been learning about functional programming through the course on Udemy. The most inspiring part so far has been writing a compose() function that takes inputs of two numbers, f, and b, multiplies them, and finally gets the absolute to create a positive result. Functions have to be self contained and have input which directly results in output, with little to no side effects. The challenge before learning in this functional programming section was to create a program which allows items to be added to a shopping cart, and allows for the items to be bought out of the cart. I used direct modifications of the initial empty array by referencing it in the buyItems() and emptyCart() functions. This could be improved by modifying a copy of the array instead of the original, and I look forward to finding new methods of improving the efficiency of this solution. 
+					</div>
+					<br>
+					<div id="text">
+						6/11/2019
+						Today, I was able to solve a lot of problems with the NASA API Search site and finish the project. I'll probably go back and tweak the colors but that's about it. I was able to realize how much easier the tweaking, whether it's JS, CSS, or HTML, becomes once I begin to master a fundemental concept that is core to the project. This time, it was the fetch API. There was a problem with the old search inquiry being loaded onto the page a second time before the new one had time to register. I was able to fix this problem after posting my code on Stack Overflow and getting an answer about my display function being executed outside of the Fetch Promise. Once I executed the function within the promise, the images began loading correctly. Now, I plan to organize my projects and do some tweaking before exitting the library before it closes. 
+						<a href="https://stackoverflow.com/questions/56550693/how-can-i-prevent-this-fetch-api-searchbar-from-loading-old-inquiries-before-new?noredirect=1#comment99683686_56550693">Stack Overflow Question</a>
+					<button onClick='readMore()' id='moreBtn'>Read More</button>
+					</div>
+					<div id="readMore">
+						<br> 
+						<div id='text'>
+						6/10/2019
+						I have been struggling with handling the JSON responses from the NASA API today. The images were loaded correctly onto the page based on a search inquiry which called the API, but there was an issue with errors in accessing the image URLs in the API during certain cases, which would cause console errors and prevent the images from loading. Also, 400 errors were not handled correctly. I'm currently researching promises to resolve this issue, but I'm planning to rewrite the whole script as there was also an issue with the images being cleared for the next search after they were displayed. The display lagged about one search behind unless the search button was clicked multiple times. I tried to fix this issue by running the clear() function several times for each click, but it still was taking multiple clicks. Hopefully both of these errors will be fixed with Promises.
+						</div>
+						<br> 
+						<div id="text">
+						6/08/2019
+						Today, Andrei Neaogie's "Advanced Javascript Concepts" and Cassidy Williams's "Javascript and React for Developers" were helpful as I coded at the Richland Library and the coffee shop. The highlight of the day was figuring out a difficult challenge with JSON from the NASA API. I ended up using localstorage to store the JSON and recall it to store it again with a variable to finally be accessible through the window object. I'm looking forward to taking it easy tomorrow, and getting a few more things figured out with this website as well as possibly solving more of the challenge hopefully to be done with the core javascript by the end of the day on Monday.  
+						</div>
+					<div id="text">
+						6/06/2019
+						I had a good time today working at the Richland Library after starting at Starbucks. I coded with Andrei Neaogies "Javascript Fundementals" course and tried a few of the higher difficulty edabit challenges. Usually I can solve the harder difficulty challenges, but today one relating to repeated characters of strings was especially hard. I used a for loop to cycle through each character and accessed them with an if statement checking if charOf() was equal to a repeat of the same character. This algorithm is faulty and problematic. I also brushed with a youtube series on recursion which started with this statements and how to bind different contexts to the this.
+						</div>
+	<br>
+					<div id="text">
+						6/05/2019
+						The site is starting to come together as I work with flexbox and colors. The nav bar really came together yesterday when I started using event listeners to modify CSS styles. By the end of the day, I'm going to have at least one more page, whether that is Projects or Contact, and create the smooth scrolling animation between pages. 
+						</div>
+	<br>
+		<div id="text">
+			   6/04/2019
+					     my name is ana and i code with javascript, html, and css. i'm looking forward to starting at hack reactor this september.</div>	
+			     </div>	
+			</div>
+	</div>
+	<div id="page2-content">
+		<h1>Projects</h1>
+		<div id="chart">
+			<div id="project">
+				<h3>NASA API Search</h2>
+				<a style='width: 220px;
+	height: auto;
+	float: right;
+	padding: 2vh;' href="/projects/nasa-api" target="_blank"><img id='primg' src="/images/nasa-api.jpg"></a>
+				<p id='text'>This is a search engine for the NASA Image API. You can type in a keyword, like 'Jupiter,' and recieve a page of images for the keyword. The images are displayed in a grid-like fashion to support all viewing environments. The JSON for the images is fetched with fetch(), lol. </p>
+			</div>
+
+	<div id="project">
+				<h3>Ocean Sim</h2>
+				<a style='width: 220px;
+	height: auto;
+	float: right;
+	padding: 2vh;' href="https://ina-fish.github.io/fish-sim/" target="_blank"><img id='primg' src="/images/fish.png"></a>
+	<br>
+				<p id='text'>This is a virtual fish tank I created as an experiement with the PIXI.js visual library. The fish are reactive to you, and will run away if you bother them. Don't bother them too much!</p>
+			</div>
+		</div>
+	</div>
 </div>
 
 
